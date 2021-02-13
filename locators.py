@@ -5,3 +5,9 @@ class HomePageLocators():
     Lokatory strony głównej
     """
     ZALOGUJ_BTN = (By.XPATH, '//button[@data-test="navigation-menu-signin"]')
+
+class LoginPageLocators():
+    """
+    Lokatory strony logowania
+    """
+    REGISTER_BTN = (By.XPATH, '//button[@data-test="registration"]')
