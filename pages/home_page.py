@@ -12,7 +12,7 @@ class HomePage(BasePage):
         wait = WebDriverWait(self.driver, 60)
         # Wywołanie metody until na obiekcie WebDriverWait
         # W efekcie otrzymamy element (jeśli warunek wystąpi)
-        element = wait.until(EC.element_to_be_clickable(*HomePageLocators.ZALOGUJ_BTN))
+        element = wait.until(EC.element_to_be_clickable(HomePageLocators.ZALOGUJ_BTN))
         # element = self.driver.find_element(*HomePageLocators.ZALOGUJ_BTN)
         element.click()
 
