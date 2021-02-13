@@ -2,7 +2,11 @@ import unittest
 from tests.base_test import BaseTest
 from pages.home_page import HomePage
 from pages.login_page import LoginPage
+from pages.registration_page import RegistrationPage
 from time import sleep
+
+name = "Marcin"
+surname = "Nowak"
 
 class RegistrationTest(BaseTest):
     """
@@ -22,8 +26,11 @@ class RegistrationTest(BaseTest):
         # Użycie metody click_register_btn zawartej w obiekcie lp klasy LoginPage
         lp.click_register_btn()
 
-
     def test_incorrect_email(self):
+        # Stworzenie instancji klasy RegistrationPage (rp)
+        rp = RegistrationPage(self.driver)
+        # Wpisz imię
+        rp.fill_name(name)
         sleep(3)
 
 if __name__=="__main__":

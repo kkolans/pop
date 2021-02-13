@@ -7,4 +7,4 @@ class BasePage():
         self._verify_page()
         
     def _verify_page(self):
-        return
+        print("Weryfikacja")

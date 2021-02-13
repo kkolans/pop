@@ -11,3 +11,9 @@ class LoginPageLocators():
     Lokatory strony logowania
     """
     REGISTER_BTN = (By.XPATH, '//button[@data-test="registration"]')
+
+class RegistrationPageLocators():
+    """
+    Lokatory strony rejestracji
+    """
+    NAME_INPUT = (By.NAME, 'firstName')
