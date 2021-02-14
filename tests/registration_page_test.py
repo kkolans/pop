@@ -7,6 +7,7 @@ from time import sleep
 
 name = "Marcin"
 surname = "Nowak"
+gender = "female"
 
 class RegistrationPageTest(BaseTest):
     """
@@ -34,7 +35,15 @@ class RegistrationPageTest(BaseTest):
         rp.fill_name(name)
         # Wpisz nazwisko
         rp.fill_surname(surname)
-        rp.choose_gender("female")
+        # Wybierz płeć
+        rp.choose_gender(gender)
+
+
+        # FAKTYCZNY TEST - SPRAWDZANIE OCZEKIWANEGO REZULTATU
+        # rp.verify_visible_errors(1, ["Nieprawidłowy adres e-mail"])
+        # rp.verify_visible_errors(2, ["Należy używać tylko liter alfabetu łacińskiego, bez znaków diakrytycznych (np.: á, é, ő) i unikać używania znaków specjalnych!",
+        #                              "Niepraidłowy adrtes e-mail"])
+
 
         sleep(3)
 
