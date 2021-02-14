@@ -26,3 +26,6 @@ class RegistrationPageLocators():
     EMAIL_INPUT = (By.NAME, 'email')
     # EMAIL_INPUT = (By.XPATH, '//input[@data-test="booking-register-email"]')
     PASSWORD_INPUT = (By.NAME, 'password')
+    NATIONALITY_INPUT = (By.XPATH, '//input[@data-test="booking-register-country"]')
+    COUNTRY_CONTAINER_DIV = (By.CLASS_NAME, 'register-form__country-container__locations')
+    COUNTRY_LABELS = (By.CLASS_NAME, '//div[@class="register-form__country-container__locations"]/label')

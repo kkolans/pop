@@ -5,14 +5,18 @@ from pages.login_page import LoginPage
 from pages.registration_page import RegistrationPage
 from time import sleep
 
+# DANE TESTOWE
 valid_name = "Marcin"
 valid_surname = "Nowak"
 valid_gender = "female"
 valid_country_code = "+48"
 valid_phone_number = "123123123"
 valid_email = "kljkjdk@poczta.onet.pl"
-invalid_email = "ljkdfdf.pl"
 valid_password = "Qwerty1231"
+valid_nationality = "Polska"
+
+invalid_email = "ljkdfdf.pl"
+
 
 class RegistrationPageTest(BaseTest):
     """
@@ -50,6 +54,8 @@ class RegistrationPageTest(BaseTest):
         rp.fill_email(invalid_email)
         # Wpisz hasło
         rp.fill_password(valid_password)
+        # Wybierz nardowość
+        rp.choose_nationality(valid_nationality)
 
 
 

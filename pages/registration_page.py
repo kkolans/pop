@@ -66,9 +66,50 @@ class RegistrationPage(BasePage):
     def fill_password(self, password):
         self.driver.find_element(*RegistrationPageLocators.PASSWORD_INPUT).send_keys(password)
 
-    # Wybór narodowości
     def choose_nationality(self, nationality):
-        pass
+        # Kliknięcie w input, żeby rozwinąć kraje
+        self.driver.find_element(*RegistrationPageLocators.NATIONALITY_INPUT).click()
+        # driver.find_element_by_xpath('//input[@data-test="booking-register-country"]').click()
+        # Wyszukanie konteneru z krajami
+        countries_labels = self.driver.find_element(*RegistrationPageLocators.COUNTRY_LABELS)
+        for label in countries_labels:
+            # Szukaj wewnątrz elementu label
+            country = label.find_element_by_tag_name('strong')
+            # Pobierz i wypisz wewnętrzny tekst elementu country
+            # print(country.get_attribute("innerText"))
+            if country.get_attribute("innerText") == nationality:
+                # Przewiń do wybranego kraju
+                country.location_once_scrolled_into_view
+                # To w niego kliknij
+                country.click()
+                # ... i nie szukaj dalej
+                break
+
+    # # Wybór narodowości (ZŁE (BAD!!!) NIE DO UŻYTKU))
+    # def choose_nationality_bad(self, nationality):
+    #     # 10. Wybierz narodowość
+    #     # Kliknięcie w input, żeby rozwinąć kraje
+    #
+    #     # Wyszukanie konteneru z krajami
+    #     countries_container = driver.find_element_by_class_name('register-form__country-container__locations')
+    #     # Szukam WEWNĄTRZ konteneru z krajami labelek
+    #     # Metoda zwróci LISTĘ WebElementów [WebElement, WebElement, Webelement....]
+    #     countries_list = countries_container.find_elements_by_tag_name('label')
+    #     print("Liczba krajów", len(countries_list))
+    #     # Powtarzaj dla każdego elementu w liście krajów
+    #     for label in countries_list:
+    #         # Szukaj wewnątrz elementu label
+    #         country = label.find_element_by_tag_name('strong')
+    #         # Pobierz i wypisz wewnętrzny tekst elementu country
+    #         # print(country.get_attribute("innerText"))
+    #         if country.get_attribute("innerText") == chosen_country:
+    #             # Przewiń do wybranego kraju
+    #             country.location_once_scrolled_into_view
+    #             # To w niego kliknij
+    #             country.click()
+    #             # ... i nie szukaj dalej
+    #             break
+
 
     # Sprawdzenie widocznych błędów
     def verify_visible_errors(self, number_of_errors, errors_text):
