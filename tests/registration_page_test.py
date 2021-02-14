@@ -8,6 +8,8 @@ from time import sleep
 name = "Marcin"
 surname = "Nowak"
 gender = "female"
+country_code = "+48"
+phone_number = "123123123"
 
 class RegistrationPageTest(BaseTest):
     """
@@ -37,6 +39,10 @@ class RegistrationPageTest(BaseTest):
         rp.fill_surname(surname)
         # Wybierz płeć
         rp.choose_gender(gender)
+        # Wpisz kod kraju
+        rp.fill_country_code(country_code)
+        # Wpisz numer telefonu
+        rp.fill_telephone_number(phone_number)
 
 
         # FAKTYCZNY TEST - SPRAWDZANIE OCZEKIWANEGO REZULTATU

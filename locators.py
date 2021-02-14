@@ -22,3 +22,4 @@ class RegistrationPageLocators():
     GENDER_MALE_BTN = (By.XPATH, '//label[@data-test="register-gendermale"]')
     COUNTRY_CODE_DIV = (By.XPATH, '//div[@data-test="booking-register-country-code"]')
     COUNTRY_CODE_INPUT = (By.NAME, 'phone-number-country-code')
+    TELEPHONE_NUMBER_INPUT = (By.NAME, 'phoneNumberValidDigits')
