@@ -1,8 +1,9 @@
-from pages.base_page import BasePage
-from locators import RegistrationPageLocators
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from pages.base_page import BasePage
+from locators import RegistrationPageLocators
 
 class RegistrationPage(BasePage):
     """
@@ -55,7 +56,7 @@ class RegistrationPage(BasePage):
 
     # Wpisanie nru telefonu
     def fill_telephone_number(self, phone_number):
-        self.driver.find_element(*RegistrationPageLocators.TELEPHONE_NUMBER_INPUT).send_keys(phone_number)
+        self.driver.find_element(*RegistrationPageLocators.TELEPHONE_NUMBER_INPUT).send_keys(phone_number, Keys.RETURN)
 
     # Wpisanie e-maila
     def fill_email(self, email):
