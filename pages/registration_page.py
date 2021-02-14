@@ -117,4 +117,14 @@ class RegistrationPage(BasePage):
         # errors_text - lista z treściami błędów
         # np. verify_visible_errors(1, ["Nieprawidłowy e-mail"])
         # np. verify_visible_errors(2, ["Wybierz płeć", "Podaj hasło"])
-        pass
+        # PSEUDOKOD:
+        # Wyszukaj iformacje o błędach (lista)
+        # Stwórz pustą listę widocznych błędów
+        # Dla kazdego błędu w liście informacji o błędach (for..)
+        # Jeśli błąd jest widoczny
+        # Dodaj do listy widocznych błędów
+        # Sprawdź, czy liczna widocznych błędów jest właściwa
+        # Stwórz (pustą) listę zawierającą (teksty) informacji o błędach
+        # Przez tyle razy, ile jest widocznych błędów (for..)
+        # Dodaj tekst błędu do listy informacji o błędach
+        # Porównaj obie listy z tekstami błędów: zadaną oraz faktyczną
