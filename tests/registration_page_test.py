@@ -12,6 +12,7 @@ valid_country_code = "+48"
 valid_phone_number = "123123123"
 valid_email = "kljkjdk@poczta.onet.pl"
 invalid_email = "ljkdfdf.pl"
+valid_password = "Qwerty1231"
 
 class RegistrationPageTest(BaseTest):
     """
@@ -45,8 +46,11 @@ class RegistrationPageTest(BaseTest):
         rp.fill_country_code(valid_country_code)
         # Wpisz numer telefonu
         rp.fill_telephone_number(valid_phone_number)
-        # Wpisz NIEPOPRAWNY EMIAL
+        # Wpisz NIEPOPRAWNY E-MAIL
         rp.fill_email(invalid_email)
+        # Wpisz hasło
+        rp.fill_password(valid_password)
+
 
 
         # FAKTYCZNY TEST - SPRAWDZANIE OCZEKIWANEGO REZULTATU

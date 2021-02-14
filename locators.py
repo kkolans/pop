@@ -25,4 +25,4 @@ class RegistrationPageLocators():
     TELEPHONE_NUMBER_INPUT = (By.NAME, 'phoneNumberValidDigits')
     EMAIL_INPUT = (By.NAME, 'email')
     # EMAIL_INPUT = (By.XPATH, '//input[@data-test="booking-register-email"]')
-    PASSWORD_INPUT = ()
+    PASSWORD_INPUT = (By.NAME, 'password')

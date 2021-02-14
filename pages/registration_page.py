@@ -64,7 +64,7 @@ class RegistrationPage(BasePage):
 
     # Wpisanie hasła
     def fill_password(self, password):
-        pass
+        self.driver.find_element(*RegistrationPageLocators.PASSWORD_INPUT).send_keys(password)
 
     # Wybór narodowości
     def choose_nationality(self, nationality):
