@@ -52,11 +52,11 @@ class RegistrationPage(BasePage):
     # Wpisanie kodu kraju
     def fill_country_code(self, country_code):
         self.driver.find_element(*RegistrationPageLocators.COUNTRY_CODE_DIV).click()
-        self.driver.find_element(*RegistrationPageLocators.COUNTRY_CODE_INPUT).send_keys(country_code)
+        self.driver.find_element(*RegistrationPageLocators.COUNTRY_CODE_INPUT).send_keys(country_code, Keys.RETURN)
 
     # Wpisanie nru telefonu
     def fill_telephone_number(self, phone_number):
-        self.driver.find_element(*RegistrationPageLocators.TELEPHONE_NUMBER_INPUT).send_keys(phone_number, Keys.RETURN)
+        self.driver.find_element(*RegistrationPageLocators.TELEPHONE_NUMBER_INPUT).send_keys(phone_number)
 
     # Wpisanie e-maila
     def fill_email(self, wpisywany_email):
