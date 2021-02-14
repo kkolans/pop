@@ -8,11 +8,12 @@ from time import sleep
 name = "Marcin"
 surname = "Nowak"
 
-class RegistrationTest(BaseTest):
+class RegistrationPageTest(BaseTest):
     """
     Test strony Rejestracji
     """
     def setUp(self):
+        print("setUp z RegistrationPageTest")
         # Wywołanie metody setUp z klasy nadrzędnej (BaseTest)
         super().setUp()
         # Kliknięcie zaloguj

@@ -6,6 +6,7 @@ class BaseTest(unittest.TestCase):
     Klasa bazowa każdego testu
     """
     def setUp(self):
+        print("setUp z BaseTest")
         self.driver = webdriver.Chrome()
         self.driver.get("https://wizzair.com/pl-pl#/")
         self.driver.maximize_window()
