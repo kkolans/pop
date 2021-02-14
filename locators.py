@@ -29,3 +29,4 @@ class RegistrationPageLocators():
     NATIONALITY_INPUT = (By.XPATH, '//input[@data-test="booking-register-country"]')
     COUNTRY_CONTAINER_DIV = (By.CLASS_NAME, 'register-form__country-container__locations')
     COUNTRY_LABELS = (By.XPATH, '//div[@class="register-form__country-container__locations"]/label')
+    ERROR_MESSAGES_SPAN = (By.XPATH, '//span[@class="input-error__message"]/span')
