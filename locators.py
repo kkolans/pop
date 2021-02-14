@@ -18,3 +18,5 @@ class RegistrationPageLocators():
     """
     NAME_INPUT = (By.NAME, 'firstName')
     SURNAME_INPUT = (By.NAME, 'lastName')
+    GENDER_FEMALE_BTN = (By.XPATH, '//label[@data-test="register-genderfemale"]')
+    GENDER_MALE_BTN = (By.XPATH, '//label[@data-test="register-gendermale"]')

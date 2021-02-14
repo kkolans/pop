@@ -32,16 +32,31 @@ class RegistrationPage(BasePage):
 
     # Wybór płci
     def choose_gender(self, gender):
-        # PSEUDOKOD
-        # Jeśli gender to "female"
-        # wybierz kobietę
-        # A jeśli nie
-        # Wybierz mężczyznę
-        # UWAGA: Będzie trzeba odsłonić te elementy
-        pass
+        if gender == "female":
+            # Kliknij Nazwisko, aby odsłonić
+            self.driver.find_element(*RegistrationPageLocators.SURNAME_INPUT).click()
+            # Wybierz kobietę
+            self.driver.find_element(*RegistrationPageLocators.GENDER_FEMALE_BTN).click()
+        else:
+            # Kliknij Imię, aby odsłonić
+            self.driver.find_element(*RegistrationPageLocators.NAME_INPUT).click()
+            # Wybierz mężczyżnę
+            self.driver.find_element(*RegistrationPageLocators.GENDER_MALE_BTN).click()
 
-    # Wpisanie nazwiska
-    # Wybór płci
+
+    def choose_gender(self, gender):
+        if gender == "female":
+            # Kliknij Nazwisko, aby odsłonić
+            self.driver.find_element(*RegistrationPageLocators.SURNAME_INPUT).click()
+            # Wybierz kobietę
+            self.driver.find_element(*RegistrationPageLocators.GENDER_FEMALE_BTN).click()
+        else:
+            # Kliknij Imię, aby odsłonić
+            self.driver.find_element(*RegistrationPageLocators.NAME_INPUT).click()
+            # Wybierz mężczyżnę
+            self.driver.find_element(*RegistrationPageLocators.GENDER_MALE_BTN).click()
+
+
     # Podanie kodu kraju
     # Wpisanie nru telefonu
     # Wpisanie e-maila

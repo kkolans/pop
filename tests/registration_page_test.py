@@ -34,6 +34,7 @@ class RegistrationPageTest(BaseTest):
         rp.fill_name(name)
         # Wpisz nazwisko
         rp.fill_surname(surname)
+        rp.choose_gender("female")
 
         sleep(3)
 
