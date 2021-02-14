@@ -71,7 +71,7 @@ class RegistrationPage(BasePage):
         self.driver.find_element(*RegistrationPageLocators.NATIONALITY_INPUT).click()
         # driver.find_element_by_xpath('//input[@data-test="booking-register-country"]').click()
         # Wyszukanie konteneru z krajami
-        countries_labels = self.driver.find_element(*RegistrationPageLocators.COUNTRY_LABELS)
+        countries_labels = self.driver.find_elements(*RegistrationPageLocators.COUNTRY_LABELS)
         for label in countries_labels:
             # Szukaj wewnątrz elementu label
             country = label.find_element_by_tag_name('strong')
