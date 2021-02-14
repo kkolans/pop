@@ -56,6 +56,8 @@ class RegistrationPageTest(BaseTest):
         rp.fill_password(valid_password)
         # Wybierz nardowość
         rp.choose_nationality(valid_nationality)
+        # UWAGA TEST!
+        rp.verify_visible_errors(1, ["Nieprawidłowy adres e-mail"])
 
 
 

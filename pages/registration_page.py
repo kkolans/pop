@@ -119,6 +119,7 @@ class RegistrationPage(BasePage):
         # np. verify_visible_errors(2, ["Wybierz płeć", "Podaj hasło"])
         # PSEUDOKOD:
         # Wyszukaj iformacje o błędach (lista)
+        error_texts = list(error_texts)
         error_messages = self.driver.find_elements(*RegistrationPageLocators.ERROR_MESSAGES_SPAN)
         # Stwórz pustą listę widocznych błędów
         visible_error_messages = []
