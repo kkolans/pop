@@ -59,6 +59,18 @@ class RegistrationPageTest(BaseTest):
         # UWAGA TEST!
         rp.verify_visible_errors(1, ["Nieprawidłowy adres e-mail"])
 
+    def test_incorrect_password(self):
+        pass
+
+    def test_incorrect_phone_number(self):
+        pass
+
+    def test_incorrect_name(self):
+        pass
+
+    def test_incorrect_surname(self):
+        pass
+
 
 
         # FAKTYCZNY TEST - SPRAWDZANIE OCZEKIWANEGO REZULTATU
