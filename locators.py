@@ -17,3 +17,4 @@ class RegistrationPageLocators():
     Lokatory strony rejestracji
     """
     NAME_INPUT = (By.NAME, 'firstName')
+    SURNAME_INPUT = (By.NAME, 'lastName')

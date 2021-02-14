@@ -17,5 +17,6 @@ class HomePage(BasePage):
         element.click()
 
     def _verify_page(self):
+        print("Weryfikacja HomePage")
         assert "Oficjalna strona Wizz Air" in self.driver.title
 

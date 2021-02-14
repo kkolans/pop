@@ -32,6 +32,9 @@ class RegistrationPageTest(BaseTest):
         rp = RegistrationPage(self.driver)
         # Wpisz imię
         rp.fill_name(name)
+        # Wpisz nazwisko
+        rp.fill_surname(surname)
+
         sleep(3)
 
 if __name__=="__main__":
