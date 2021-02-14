@@ -23,7 +23,15 @@ class RegistrationPage(BasePage):
         element.send_keys(name)
 
     # Wpisanie nazwiska
+    def fill_surname(self, surname):
+        # Do zaimplementowania
+        pass
+
     # Wybór płci
+    def choose_gender(self, gender):
+        # Do zaimplementowania
+        pass
+
     # Podanie kodu kraju
     # Wpisanie nru telefonu
     # Wpisanie e-maila
