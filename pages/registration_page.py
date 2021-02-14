@@ -50,6 +50,7 @@ class RegistrationPage(BasePage):
 
     # Wpisanie kodu kraju
     def fill_country_code(self, country_code):
+
         pass
 
     # Wpisanie nru telefonu
