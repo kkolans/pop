@@ -37,6 +37,7 @@ class RegistrationPageTest(BaseTest):
         # Użycie metody click_register_btn zawartej w obiekcie lp klasy LoginPage
         lp.click_register_btn()
 
+    @unittest.skip("Pomijam")
     def test_incorrect_email(self):
         # Stworzenie instancji klasy RegistrationPage (rp)
         rp = RegistrationPage(self.driver)
@@ -59,15 +60,28 @@ class RegistrationPageTest(BaseTest):
         # UWAGA TEST!
         rp.verify_visible_errors(1, ["Nieprawidłowy adres e-mail"])
 
-    def test_incorrect_password(self):
-        pass
+    def test_no_gender(self):
+        # Stworzenie instancji klasy RegistrationPage (rp)
+        rp = RegistrationPage(self.driver)
+        rp.fill_name("4")
+        rp.fill_surname("Nowak")
+        rp.fill_country_code("+23")
+        rp.fill_telephone_number("124567548")
+        rp.fill_email("jkhjshj@gmail.com")
+        rp.fill_password("Qwerty12nsa")
+        rp.choose_nationality("Rosja")
+        # UWAGA TEST!
+        rp.verify_visible_errors(1, "Wybierz")
 
+    @unittest.skip("skip")
     def test_incorrect_phone_number(self):
         pass
 
+    @unittest.skip("skip")
     def test_incorrect_name(self):
         pass
 
+    @unittest.skip("skip")
     def test_incorrect_surname(self):
         pass
 
