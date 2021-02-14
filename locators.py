@@ -23,3 +23,6 @@ class RegistrationPageLocators():
     COUNTRY_CODE_DIV = (By.XPATH, '//div[@data-test="booking-register-country-code"]')
     COUNTRY_CODE_INPUT = (By.NAME, 'phone-number-country-code')
     TELEPHONE_NUMBER_INPUT = (By.NAME, 'phoneNumberValidDigits')
+    EMAIL_INPUT = (By.NAME, 'email')
+    # EMAIL_INPUT = (By.XPATH, '//input[@data-test="booking-register-email"]')
+    PASSWORD_INPUT = ()

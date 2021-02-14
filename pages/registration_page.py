@@ -59,8 +59,8 @@ class RegistrationPage(BasePage):
         self.driver.find_element(*RegistrationPageLocators.TELEPHONE_NUMBER_INPUT).send_keys(phone_number, Keys.RETURN)
 
     # Wpisanie e-maila
-    def fill_email(self, email):
-        pass
+    def fill_email(self, wpisywany_email):
+        self.driver.find_element(*RegistrationPageLocators.EMAIL_INPUT).send_keys(wpisywany_email)
 
     # Wpisanie hasła
     def fill_password(self, password):

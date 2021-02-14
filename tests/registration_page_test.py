@@ -5,11 +5,13 @@ from pages.login_page import LoginPage
 from pages.registration_page import RegistrationPage
 from time import sleep
 
-name = "Marcin"
-surname = "Nowak"
-gender = "female"
-country_code = "+48"
-phone_number = "123123123"
+valid_name = "Marcin"
+valid_surname = "Nowak"
+valid_gender = "female"
+valid_country_code = "+48"
+valid_phone_number = "123123123"
+valid_email = "kljkjdk@poczta.onet.pl"
+invalid_email = "ljkdfdf.pl"
 
 class RegistrationPageTest(BaseTest):
     """
@@ -34,15 +36,17 @@ class RegistrationPageTest(BaseTest):
         # Stworzenie instancji klasy RegistrationPage (rp)
         rp = RegistrationPage(self.driver)
         # Wpisz imię
-        rp.fill_name(name)
+        rp.fill_name(valid_name)
         # Wpisz nazwisko
-        rp.fill_surname(surname)
+        rp.fill_surname(valid_surname)
         # Wybierz płeć
-        rp.choose_gender(gender)
+        rp.choose_gender(valid_gender)
         # Wpisz kod kraju
-        rp.fill_country_code(country_code)
+        rp.fill_country_code(valid_country_code)
         # Wpisz numer telefonu
-        rp.fill_telephone_number(phone_number)
+        rp.fill_telephone_number(valid_phone_number)
+        # Wpisz NIEPOPRAWNY EMIAL
+        rp.fill_email(invalid_email)
 
 
         # FAKTYCZNY TEST - SPRAWDZANIE OCZEKIWANEGO REZULTATU
